@@ -31,10 +31,13 @@ class Board(QMainWindow, Ui_MainWindow):
 
     def drawFlag(self, qp):
         if not self.not_draw:
-            x = randrange(0, 400)
-            y = randrange(0, 400)
+            x = randrange(0, 800)
+            y = randrange(0, 800)
             radius = randrange(5, 200)
-            qp.setBrush(QColor('yellow'))
+            r = randrange(0, 255)
+            g = randrange(0, 255)
+            b = randrange(0, 255)
+            qp.setBrush(QColor(r, g, b))
             qp.drawEllipse(x, y, radius, radius)
 
 
